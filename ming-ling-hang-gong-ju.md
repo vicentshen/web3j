@@ -4,10 +4,10 @@
 
 这些工具提供了：
 
-- 钱包创建
-- 钱包密码管理
-- 从一个钱包转以太币到另一个钱包
-- 生成Solidity智能合约的包装
+* 钱包创建
+* 钱包密码管理
+* 从一个钱包转以太币到另一个钱包
+* 生成Solidity智能合约的包装
 
 你可以在项目的发布页面获取zipfile/tarball的命令行工具，OS X用户可以通过Homebrea，linux架构的用户可以通过AUR。
 
@@ -39,7 +39,7 @@ __      _____| |__      / /_     _   ___
 Usage: web3j version|wallet|solidity ...
 ```
 
-##钱包工具
+## 钱包工具
 
 生成一个新的以太坊钱包：
 
@@ -90,8 +90,7 @@ Transaction hash: 0xb00afc5c2bb92a76d03e17bd3a0175b80609e877cb124c02d19000d52939
 Mined block number: 1849039
 ```
 
-##Solidity智能合约包装生成器
+## Solidity智能合约包装生成器
 
 请参考[Solidity smart contract wrappers](https://docs.web3j.io/smart_contracts.html#smart-contract-wrappers)。
-
 

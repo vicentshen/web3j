@@ -4,19 +4,19 @@
 
 在web3j中的[ABI module](https://github.com/web3j/web3j/tree/master/abi)中提供了ABI规范的支持，并且包含了：
 
-- Java实现了所有的API类型，包括和原生Java类型的转换
-- 函数和事件支持
-- 大量的单元测试
+* Java实现了所有的API类型，包括和原生Java类型的转换
+* 函数和事件支持
+* 大量的单元测试
 
-##类型映射
+## 类型映射
 
 原生Java到API类型映射如下：
 
-- boolean > bool
-- BigInteger > uint/int
-- byte[] > bytes
-- String > string and address types
-- List<> > dynamic/static array
+* boolean &gt; bool
+* BigInteger &gt; uint/int
+* byte\[\] &gt; bytes
+* String &gt; string and address types
+* List&lt;&gt; &gt; dynamic/static array
 
 BigInteger类型必须用户数字类型，在以太坊中256bit的整数值被认为是数字类型。
 
@@ -24,10 +24,11 @@ BigInteger类型必须用户数字类型，在以太坊中256bit的整数值被�
 
 你可以通过[Solidity smart contact wrappers](https://docs.web3j.io/smart_contracts.html#smart-contract-wrappers)了解更多在Java中使用ABI类型的信息。
 
-##更多细节
+## 更多细节
 
 你可以通过[ABI单元测试](https://github.com/web3j/web3j/tree/master/abi/src/test/java/org/web3j/abi)来获取编解码的例子。
 
-##依赖
+## 依赖
 
-这是非常清凉的模块，它只依赖了用于加密Hash的第三方依赖[Bouncy Castle](https://www.bouncycastle.org/)(android中是[Spongy Castle](https://rtyley.github.io/spongycastle/))。希望在JVM或者Android中使用以太坊的ABI的其他项目使用这个模块，而不是写他们自己的实现。
+这是非常清凉的模块，它只依赖了用于加密Hash的第三方依赖[Bouncy Castle](https://www.bouncycastle.org/)\(android中是[Spongy Castle](https://rtyley.github.io/spongycastle/)\)。希望在JVM或者Android中使用以太坊的ABI的其他项目使用这个模块，而不是写他们自己的实现。
+

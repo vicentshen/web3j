@@ -5,7 +5,7 @@
 依赖顺序如下：
 
 * utils - 最小工具类的集合
-* rlp - 递归长度前缀(RLP)解码器
+* rlp - 递归长度前缀\(RLP\)解码器
 * abi - 应用二级制接口解码器
 * crypto - 用于在以太坊中交易以及密码/钱包管理的加密库
 * tuples - 简单元祖库
@@ -23,9 +23,7 @@
 
 所有的模块都通过Maven以及二进制发布了，发布的名字列在了下面：
 
-For Java:
-    org.web3j:<模块名称>:<版本号>
+For Java: org.web3j:&lt;模块名称&gt;:&lt;版本号&gt;
 
-For Android:
-    org.web3j:<模块名称>:<版本号>-android
+For Android: org.web3j:&lt;模块名称&gt;:&lt;版本号&gt;-android
 

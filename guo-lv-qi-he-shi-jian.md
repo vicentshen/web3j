@@ -14,13 +14,13 @@
 
 web3j管理了[Filter](https://github.com/web3j/web3j/blob/master/core/src/main/java/org/web3j/protocol/core/filters/Filter.java)的实现解决了这些问题，所以你通过使用这些过滤器拥有一个完全的异步的事件。它使用RxJava的Observables,它支持方便的API来使用这些事件，这将有助于通过功能组合JSON-RPC调用。
 
-###提示
+### 提示
 
 Infura中不支持过滤器。
 
-##区块和交易过滤器
+## 区块和交易过滤器
 
-为了监听所有被加到区块链的新区快(false参数指定了我们只需要区块，不需要绑定的交易)：
+为了监听所有被加到区块链的新区快\(false参数指定了我们只需要区块，不需要绑定的交易\)：
 
 ```java
 Subscription subscription = web3j.blockObservable(false).subscribe(block -> {
@@ -36,7 +36,7 @@ Subscription subscription = web3j.transactionObservable().subscribe(tx -> {
 });
 ```
 
-为了接收所有被提交到网络中等待成交的交易(在他们被打包进区块之前)：
+为了接收所有被提交到网络中等待成交的交易\(在他们被打包进区块之前\)：
 
 ```java
 Subscription subscription = web3j.pendingTransactionObservable().subscribe(tx -> {
@@ -54,7 +54,7 @@ subscription.unsubscribe();
 
 还有其他回调仅仅只提供了交易和区块的hash值，你可以通过[Web3jRx](https://github.com/web3j/web3j/blob/master/core/src/main/java/org/web3j/protocol/rx/Web3jRx.java)接口获取更多信息。
 
-##回放过滤器
+## 回放过滤器
 
 web3j提供了回放区块以及交易历史的过滤器。
 
@@ -78,7 +78,7 @@ Subscription subscription = web3j.replayTransactionsObservable(
 });
 ```
 
-你也可以用web3j回放所有区块直到最近的区块，并且web3j也提供了通知(通过提交的观察者)一旦你捕获了。
+你也可以用web3j回放所有区块直到最近的区块，并且web3j也提供了通知\(通过提交的观察者\)一旦你捕获了。
 
 ```java
 Subscription subscription = web3j.catchUpToLatestBlockObservable(
@@ -110,9 +110,9 @@ Subscription subscription = web3j.catchUpToLatestAndSubscribeToNewTransactionsOb
 
 所有上面的过滤器都可以通过[Web3jRx](https://github.com/web3j/web3j/blob/master/core/src/main/java/org/web3j/protocol/rx/Web3jRx.java)接口。
 
-##话题过滤器和EVM事件
+## 话题过滤器和EVM事件
 
-话题过滤器捕捉发生在网络上的以太坊虚拟机(EVM)事件。这些事件是被智能合约生成的，并且保存在关联的智能合约的交易日志中。
+话题过滤器捕捉发生在网络上的以太坊虚拟机\(EVM\)事件。这些事件是被智能合约生成的，并且保存在关联的智能合约的交易日志中。
 
 [Solidity documentation](http://solidity.readthedocs.io/en/develop/contracts.html#events)提供了EVM事件的概览。
 
@@ -136,7 +136,7 @@ web3j.ethLogObservable(filter).subscribe(log -> {
 
 如果你创建了一个没有关联主题的过滤器实例，所有发生在网络中的EVM事件都会被这个过滤器捕获。
 
-##功能组成的说明
+## 功能组成的说明
 
 除了`send()`和`sendAsync()`，所有web3j支持的JSON-RPC方法实现了`observable()`方法来创建一个异步执行请求的Obervable。这使得组合JSON-RPC方法调用很直接。
 
@@ -153,8 +153,9 @@ public Observable<EthBlock> blockObservable(
 
 在这里，我们先创建了一个提供新创建区块hash的observable。然后使用`flatMap`来调用`ethGetBlockByHash`来获得区块的详细信息。
 
-##更多例子
+## 更多例子
 
 请访问[ObservableIT](https://github.com/web3j/web3j/blob/master/integration-tests/src/test/java/org/web3j/protocol/core/ObservableIT.java)来获取更多示例。
 
 你可以查看测试用例[EventFilterIT](https://github.com/web3j/web3j/blob/master/integration-tests/src/test/java/org/web3j/protocol/scenarios/EventFilterIT.java)来获取过滤器API的说明。
+

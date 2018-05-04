@@ -1,14 +1,14 @@
 # Table of contents
 
-* 快速开始
-* [快速开始](kuai-su-kai-shi.md)
-* [入门](kai-shi.md)
+* [Introduction](README.md)
+* [快速开始](kuai-su-kai-shi-1.md)
+* [入门](ru-men.md)
 * [模块](mo-kuai.md)
 * [交易](jiao-yi.md)
 * [智能合约](zhi-neng-he-yue.md)
 * [应用二进制接口](ying-yong-er-jin-zhi-jie-kou.md)
 * [递归长度前缀](di-gui-chang-du-qian-zhui.md)
-* [命令行工具](command-line-tools.md)
+* [命令行工具](ming-ling-hang-gong-ju.md)
 * [过滤器和事件](guo-lv-qi-he-shi-jian.md)
 * [管理API](guan-li-api.md)
 * [在web3j中使用Infura](zai-web3j-zhong-shi-yong-infura.md)
